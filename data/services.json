@@ -1,0 +1,64 @@
+[
+    {
+        "id": "1",
+        "name": "Letters (Stamped)",
+        "description": "Weight Not Over (4oz.)",
+        "weight": {
+            "1oz.": 0.55,
+            "2oz.": 0.75,
+            "3oz.": 0.95,
+            "4oz.": 1.15
+        }
+    },
+    {
+        "id": "2",
+        "name": "Letters (Metered)",
+        "description": "Weight Not Over (3.5oz.)",
+        "weight": {
+            "1oz.":	0.51,
+            "2oz.":	0.71,
+            "3oz.":	0.91,
+            "3.5oz.":	1.11
+        }
+    },
+    {
+        "id": "3",
+        "name": "Large Envelopes (Flats)",
+        "description": "Weight Not Over (13oz.)",
+        "weight": {            	 
+            "1oz.":1.00,
+            "2oz.":	1.20,
+            "3oz.":	1.40,
+            "4oz.":	1.60,
+            "5oz.":	1.80,
+            "6oz.":	2.00,
+            "7oz.":	2.20,
+            "8oz.":	2.40,
+            "9oz.":	2.60,
+            "10oz.":	2.80,
+            "11oz.":	3.00,
+            "12oz.":	3.20,
+            "13oz.":	3.40
+        }
+    },
+    {
+        "id": "4",
+        "name": "First-Class Package Service—Retail",
+        "description": "Weight Not Over (oz.)",
+        "weight": {
+            "1oz.":	4.00,
+            "2oz.":	4.00,
+            "3oz.":	4.00,
+            "4oz.":	4.00,
+            "5oz.":	4.80,
+            "6oz.":	4.80,
+            "7oz.":	4.80,
+            "8oz.":	4.80,
+            "9oz.":	5.50,
+            "10oz.":	5.50,
+            "11oz.":	5.50,
+            "12oz.":	5.50,
+            "13oz.":	6.25
+        }
+    }
+]

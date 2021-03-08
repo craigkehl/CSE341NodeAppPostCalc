@@ -1,0 +1,67 @@
+<%- include ('partials/header.ejs') %>
+</head>
+
+<body>
+  <%- include ('partials/nav.ejs') %>
+<main>
+  <div class="jumbotron text-center">
+    <div class="container">
+      <h1>Calculate Your Postal Rate</h1>
+      <p>Please choose the service to use and enter the weight of your item to see your cost.</p>
+    </div>
+  </div>
+  <div class="container">  
+    <div class="row">
+      <% if (prods.length > 0) { %> 
+        <form action="" method="POST"></form>
+          <div class="col-md-6">
+            <h3><span class="glyphicon glyphicon-link"></span> Choose Service</h3>
+            <% prods.forEach(service => { %> 
+              <div class="form-check">          
+                <input class="form-check-input" 
+                  type="radio" 
+                  name="serviceRadios" 
+                  id='serviceRadio<%= service.id %>' 
+                  value='<%= service.id %>'
+                  onchange='getRate(value)'>
+                <label class="form-check-label" for='serviceRadio<%= service.id %>'>
+                  <%= service.name %>
+                </label>
+              </div>
+            <% }) %>
+          </div>
+          <div class="col-md-6" id="rate-info">
+               
+          </div>
+        </form>
+        <% } else { %> 
+          <h3><span class="glyphicon glyphicon-link"></span> No Services Currently Available</h3>
+          <p>Please try again later</p>        
+          <% } %>
+  </div>
+</main>
+<script>
+  const getRate = (id, response) => {
+    fetch(`/getRates/${id}`)
+      .then(response => response.json())
+      .then(selectedService => {
+        let rateInfo = ` 
+        <h3><span class="glyphicon glyphicon-link"></span>Select The Item's Weight Class</h3>
+            <p>The item must be equal to or less than the weight selected.</p>
+              <div class="form-group">
+                <label for="itemWeight">Enter Your ${selectedService.name}'s Weight</label>
+                <select class="form-control" id="exampleFormControlSelect1">`
+                  let weight = selectedService.weight
+                  for (var key in weight) {
+                  rateInfo +=  `<option value='${weight[key]}'>${key}oz, ${weight[key]}</option>`
+                  }
+                rateInfo += `</select>
+              </div>
+            <button type="submit" class="btn btn-primary">Submit</button>`        
+        document.getElementById("rate-info").innerHTML = rateInfo;
+      })
+  }
+</script>
+
+</body>
+</html>
