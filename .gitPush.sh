@@ -6,3 +6,4 @@ GIT=`which git`
 ${GIT} add --all .
 ${GIT} commit -m "Test commit"
 ${GIT} push heroku
+${GIT} push github
