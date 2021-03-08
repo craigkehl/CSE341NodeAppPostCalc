@@ -24,3 +24,17 @@ exports.getRates = (req, res, next) => {
         res.json(service)        
     })
 }
+
+exports.postPurchase = (req, res, next) => {
+    const serviceId = req.body.serviceId
+    console.log(serviceId)
+    const itemWeight = req.body.itemWeight
+    Service.fetchById( serviceId, service => {
+        const purchase = {
+            "name": service.name,
+            "weight": itemWeight,
+            "price": service.weight.itemWeight
+        }
+        res.json(purchase)        
+    })
+}

@@ -2,7 +2,7 @@
     {
         "id": "1",
         "name": "Letters (Stamped)",
-        "description": "Weight Not Over (4oz.)",
+        "description": "not weight over (4oz.)",
         "weight": {
             "1oz.": 0.55,
             "2oz.": 0.75,
@@ -13,7 +13,7 @@
     {
         "id": "2",
         "name": "Letters (Metered)",
-        "description": "Weight Not Over (3.5oz.)",
+        "description": "not weight over (3.5oz.)",
         "weight": {
             "1oz.":	0.51,
             "2oz.":	0.71,
@@ -24,7 +24,7 @@
     {
         "id": "3",
         "name": "Large Envelopes (Flats)",
-        "description": "Weight Not Over (13oz.)",
+        "description": "not weight over (13oz.)",
         "weight": {            	 
             "1oz.":1.00,
             "2oz.":	1.20,
@@ -44,7 +44,7 @@
     {
         "id": "4",
         "name": "First-Class Package Service—Retail",
-        "description": "Weight Not Over (oz.)",
+        "description": "not weight over (oz.)",
         "weight": {
             "1oz.":	4.00,
             "2oz.":	4.00,
