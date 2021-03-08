@@ -1,5 +1,6 @@
 const path = require('path');
 
+const PORT = process.env.PORT || 5000
 const express = require('express');
 const bodyParser = require('body-parser');
 
@@ -10,9 +11,9 @@ app.set('views', 'views');
 
 const shopRoutes = require('./routes/shop');
 
-app.use(bodyParser.urlencoded({ extended: false })); 
+app.use(express.urlencoded({ extended: true })); 
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(shopRoutes);
 
-app.listen(3000);
+app.listen(PORT);
